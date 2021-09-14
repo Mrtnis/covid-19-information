@@ -1,12 +1,13 @@
 <template>
-  <nav class="navbar navbar-light bg-light p-2">
+  <nav class="navbar navbar-light p-2">
     <div class="container">
       <a class="navbar-brand text-center">
-        <i class="bi-shield-fill-plus text-success brand">
-          <span><h6 class="align-middle title">saveFromCovid</h6></span>
-        </i>
+        <i class="bi-shield-fill-plus text-success brand"> </i>
+        <span
+          ><h6 class="align-middle title fw-bolder">saveFromCovid<span class="text-dark">.go.id</span></h6></span
+        >
       </a>
-      <div class="d-flex">
+      <div class="d-flex d-md-block d-none">
         <div class="row">
           <div class="col">
             <h6 class="active">Home</h6>
@@ -19,6 +20,9 @@
           </div>
           <div class="col">
             <h6>Vaccine</h6>
+          </div>
+          <div class="col">
+            <h6 class="contact">Contact</h6>
           </div>
         </div>
       </div>
@@ -35,6 +39,20 @@
   color: black;
 }
 .d-flex {
+  color: #76c893;
+}
+.contact {
+  background-color: #76c893;
+  color: white;
+  border-radius: 25px;
+  text-align: center;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: -5px;
+}
+.title {
   color: #76c893;
 }
 
