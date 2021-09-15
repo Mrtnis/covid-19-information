@@ -1,10 +1,13 @@
 <template>
   <div>
     <Navbar />
-    <div class="container">
+    <div class="home-page">
       <Home />
     </div>
     <Data />
+    <div class="container">
+      <Vaccine />
+    </div>
   </div>
 </template>
 
@@ -12,12 +15,14 @@
 import Navbar from './components/Navbar.vue';
 import Home from './views/Home.vue';
 import Data from './components/Data.vue';
+import Vaccine from './components/Vaccine.vue';
 
 export default {
   components: {
     Navbar,
     Home,
     Data,
+    Vaccine,
   },
 };
 </script>
@@ -26,11 +31,14 @@ export default {
 body {
   font-family: 'Roboto', sans-serif;
 }
+.text-success {
+  color: #76c893 !important;
+}
 </style>
 
 <style scoped>
-.container {
+.home-page {
   margin-top: 100px;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 </style>

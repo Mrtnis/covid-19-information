@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="container">
     <div class="row">
       <div class="col-md-6">
         <div class="tagline">
@@ -8,11 +8,13 @@
         </div>
         <div class="information">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam, voluptas sint. Obcaecati alias quis esse suscipit, voluptates officiis nulla soluta.</div>
         <div class="row mt-4">
-          <div class="col-md">
+          <div class="col-md-8">
             <div class="btn getVaccine">Get Your Vaccine</div>
           </div>
-          <div class="col-md">
-            <div class="btn learnMore">Learn More</div>
+          <div class="col-md-4">
+            <div class="calendar">
+              <i class="bi bi-calendar-check-fill"></i>
+            </div>
           </div>
         </div>
       </div>
@@ -51,18 +53,22 @@
 .getVaccine {
   background-color: #76c893;
   color: white;
-  border-radius: 30px;
-  padding: 15px;
-  padding-right: 40px;
-  padding-left: 40px;
+  border-radius: 20px;
+  padding: 25px;
+  padding-right: 90px;
+  padding-left: 90px;
   box-shadow: 0 10px 18px #76c893;
 }
-.learnMore {
-  border-color: #76c893;
-  border-radius: 30px;
-  color: #76c893;
-  padding: 15px;
-  padding-right: 50px;
-  padding-left: 50px;
+.calendar {
+  text-align: center;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  background-color: #76c893;
+}
+.bi-calendar-check-fill {
+  color: white;
+  line-height: 70px;
+  font-size: 30px;
 }
 </style>
