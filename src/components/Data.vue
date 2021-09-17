@@ -4,20 +4,20 @@
       <div class="card-body">
         <div class="row text-center">
           <div class="col text-danger">
-            <div class="title">204</div>
-            <div class="subtitle">Affected Country</div>
+            <div class="title">{{ data.length - 1 }}</div>
+            <div class="subtitle">Affected Province</div>
           </div>
           <div class="col text-danger">
-            <div class="title">1,098,848</div>
-            <div class="subtitle">Confirmed Cases</div>
+            <div class="title">{{ formatNumber(countPositive) }}</div>
+            <div class="subtitle">Positive Cases</div>
           </div>
           <div class="col text-success">
-            <div class="title">226.106</div>
+            <div class="title">{{ formatNumber(countRecovery) }}</div>
             <div class="subtitle">Recover Cases</div>
           </div>
           <div class="col text-danger">
-            <div class="title">58,871</div>
-            <div class="subtitle">Worlwide Death</div>
+            <div class="title">{{ formatNumber(countDeath) }}</div>
+            <div class="subtitle">Death Cases</div>
           </div>
         </div>
         <div class="row mt-4">
@@ -35,19 +35,41 @@
 
 <script>
 import axios from 'axios';
+import api from '../api';
 
 export default {
   data() {
     return {
-      data: '',
+      data: [],
+      api_origin: api.API_ORIGIN,
     };
   },
   methods: {
-    getData() {
-      axios.get('https://covid19.mathdro.id/api').then(({ data }) => {
-        console.log(data);
-      });
+    formatNumber(par) {
+      return new Intl.NumberFormat().format(par);
     },
+  },
+  computed: {
+    countPositive() {
+      return this.data.reduce(function (item, dt) {
+        return item + dt.kasusPosi;
+      }, 0);
+    },
+    countRecovery() {
+      return this.data.reduce(function (item, dt) {
+        return item + dt.kasusSemb;
+      }, 0);
+    },
+    countDeath() {
+      return this.data.reduce(function (item, dt) {
+        return item + dt.kasusMeni;
+      }, 0);
+    },
+  },
+  mounted() {
+    axios.get(`${this.api_origin}/api/provinsi/`).then(({ data }) => {
+      this.data = data.data;
+    });
   },
 };
 </script>

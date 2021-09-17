@@ -29,10 +29,10 @@
 .medicine {
   height: 100%;
   width: 100%;
-  transition: width 2s ease;
+  transition: width 1.5s ease;
 }
 .medicine:hover {
-  width: 80%;
+  width: 90%;
   align-content: center !important;
 }
 .tagline {
@@ -71,7 +71,14 @@
   height: 70px;
   width: 70px;
   border-radius: 50%;
-  background-color: #76c893;
+  background: linear-gradient(to left, #d9534f 50%, #76c893 50%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+  transition: all 0.5s ease-out;
+}
+.calendar:hover {
+  background-position: right bottom;
+  color: white;
 }
 .bi-calendar-check-fill {
   color: white;
