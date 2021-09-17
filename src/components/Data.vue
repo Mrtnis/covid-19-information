@@ -22,13 +22,35 @@
         </div>
         <div class="row mt-4">
           <div class="col">
-            <div class="text-center info">Data updated by <span class="text-success source">www.datacovid19.com</span></div>
+            <div class="text-center info">
+              See all data covid in Indonesian.
+              <span @click="getData" class="text-success source">Klik here!</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </template>
+
+<script>
+import axios from 'axios';
+
+export default {
+  data() {
+    return {
+      data: '',
+    };
+  },
+  methods: {
+    getData() {
+      axios.get('https://covid19.mathdro.id/api').then(({ data }) => {
+        console.log(data);
+      });
+    },
+  },
+};
+</script>
 
 <style scoped>
 .card {
@@ -47,5 +69,6 @@
 }
 .source {
   border-bottom: 1px solid #76c893;
+  cursor: pointer;
 }
 </style>

@@ -51,13 +51,20 @@
   line-height: 30px;
 }
 .getVaccine {
-  background-color: #76c893;
   color: white;
+  border: none;
   border-radius: 20px;
   padding: 25px;
   padding-right: 90px;
   padding-left: 90px;
-  box-shadow: 0 10px 18px #76c893;
+  background: linear-gradient(to right, #d9534f 50%, #76c893 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.5s ease-out;
+}
+.getVaccine:hover {
+  background-position: left bottom;
+  color: white;
 }
 .calendar {
   text-align: center;
