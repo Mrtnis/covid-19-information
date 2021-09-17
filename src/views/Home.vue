@@ -1,29 +1,49 @@
 <template>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <div class="tagline">
-          Let's <span class="tag">protect</span> <br />
-          each other from <span class="tag">covid.</span>
-        </div>
-        <div class="information">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam, voluptas sint. Obcaecati alias quis esse suscipit, voluptates officiis nulla soluta.</div>
-        <div class="row mt-4">
-          <div class="col-md-8">
-            <div class="btn getVaccine">Get Your Vaccine</div>
-          </div>
-          <div class="col-md-4">
-            <div class="calendar">
-              <i class="bi bi-calendar-check-fill"></i>
+  <section>
+    <div class="home-page">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="tagline">
+              Let's <span class="tag">protect</span> <br />
+              each other from <span class="tag">covid.</span>
+            </div>
+            <div class="information">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam, voluptas sint. Obcaecati alias quis esse suscipit, voluptates officiis nulla soluta.</div>
+            <div class="row mt-4">
+              <div class="col-md-8">
+                <div class="btn getVaccine">Get Your Vaccine</div>
+              </div>
+              <div class="col-md-4">
+                <div class="calendar">
+                  <i class="bi bi-calendar-check-fill"></i>
+                </div>
+              </div>
             </div>
           </div>
+          <div class="col-md-6">
+            <img src="../../public/assets/images/medicine.svg" alt="medicine" class="medicine" />
+          </div>
         </div>
       </div>
-      <div class="col-md-6">
-        <img src="../../public/assets/images/medicine.svg" alt="medicine" class="medicine" />
-      </div>
     </div>
-  </div>
+    <Data />
+    <div class="container">
+      <Vaccine />
+    </div>
+  </section>
 </template>
+
+<script>
+import Data from './../components/Data.vue';
+import Vaccine from './../components/Vaccine.vue';
+
+export default {
+  components: {
+    Data,
+    Vaccine,
+  },
+};
+</script>
 
 <style>
 .medicine {
@@ -84,5 +104,9 @@
   color: white;
   line-height: 70px;
   font-size: 30px;
+}
+.home-page {
+  margin-top: 100px;
+  margin-bottom: 50px;
 }
 </style>
