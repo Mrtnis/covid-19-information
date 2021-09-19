@@ -3,21 +3,25 @@
     <div class="card">
       <div class="card-body">
         <div class="row text-center">
-          <div class="col text-danger">
+          <div class="col-md-3 col-xs-12 text-danger">
             <div class="title">{{ data.length - 1 }}</div>
             <div class="subtitle">Affected Province</div>
+            <hr class="line-cases" />
           </div>
-          <div class="col text-danger">
+          <div class="col-md-3 col-xs-12 text-danger">
             <div class="title">{{ formatNumber(countPositive) }}</div>
             <div class="subtitle">Positive Cases</div>
+            <hr class="line-cases" />
           </div>
-          <div class="col text-success">
+          <div class="col-md-3 col-xs-12 text-success">
             <div class="title">{{ formatNumber(countRecovery) }}</div>
             <div class="subtitle">Recover Cases</div>
+            <hr class="line-cases" />
           </div>
-          <div class="col text-danger">
+          <div class="col-md-3 col-xs-12 text-danger">
             <div class="title">{{ formatNumber(countDeath) }}</div>
             <div class="subtitle">Death Cases</div>
+            <hr class="line-cases" />
           </div>
         </div>
         <div class="row mt-4">
@@ -92,5 +96,21 @@ export default {
 .source {
   border-bottom: 1px solid #76c893;
   cursor: pointer;
+}
+@media only screen and (max-width: 600px) {
+  .col-xs-12 {
+    margin-bottom: 30px;
+  }
+  .line-cases {
+    margin-top: 10px !important;
+    margin: auto;
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .line-cases {
+    display: none;
+  }
 }
 </style>

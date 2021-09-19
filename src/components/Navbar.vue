@@ -2,11 +2,14 @@
   <nav class="navbar navbar-light p-2">
     <div class="container">
       <a class="navbar-brand text-center">
-        <i class="bi-shield-fill-plus text-success brand"> </i>
-        <span
-          ><h6 class="align-middle title fw-bolder">saveFromCovid<span class="text-dark">.go.id</span></h6></span
-        >
+        <i class="bi-shield-fill-plus text-success brand">
+          <span class="fw-bolder h6 align-middle d-sm-block d-md-none">saveFromCovid<span class="text-dark">.go.id</span></span>
+        </i>
+        <span>
+          <h6 class="align-middle title fw-bolder">saveFromCovid<span class="text-dark">.go.id</span></h6>
+        </span>
       </a>
+      <i class="bi bi-list d-sm-block d-md-none"></i>
       <div class="d-flex d-md-block d-none">
         <div class="row">
           <div class="col">
@@ -59,6 +62,9 @@
 @media only screen and (max-width: 600px) {
   .title {
     display: none;
+  }
+  .bi-list {
+    font-size: 25px;
   }
 }
 </style>

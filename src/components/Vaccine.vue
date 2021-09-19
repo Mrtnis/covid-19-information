@@ -11,7 +11,7 @@
       </div>
     </div>
     <div class="row mt-3">
-      <div class="col-md-3">
+      <div class="col-md-3 mb-4">
         <div class="card shadow">
           <div class="card-body">
             <div class="row">
@@ -32,7 +32,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-3 mb-4">
         <div class="card shadow">
           <div class="card-body">
             <div class="row">
@@ -53,7 +53,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-3 mb-4">
         <div class="card shadow">
           <div class="card-body">
             <div class="row">
@@ -74,7 +74,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-3 mb-4">
         <div class="card shadow">
           <div class="card-body">
             <div class="row">
