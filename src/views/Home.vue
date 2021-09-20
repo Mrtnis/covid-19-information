@@ -60,21 +60,19 @@
     </div>
     <!-- Data -->
     <Data />
-    <!-- vaccine -->
-    <div class="container">
-      <Vaccine />
-    </div>
+    <!-- province -->
+    <Province />
   </section>
 </template>
 
 <script>
 import Data from './../components/Data.vue';
-import Vaccine from './../components/Vaccine.vue';
+import Province from './../components/Province.vue';
 
 export default {
   components: {
     Data,
-    Vaccine,
+    Province,
   },
 };
 </script>

@@ -27,8 +27,8 @@
         <div class="row mt-4">
           <div class="col">
             <div class="text-center info">
-              See all data covid in Indonesian.
-              <span @click="getData" class="text-success source">Klik here!</span>
+              Data get from
+              <span><a href="" class="text-success source">https://indonesia-covid-19.mathdro.id</a></span>
             </div>
           </div>
         </div>
@@ -96,6 +96,9 @@ export default {
 .source {
   border-bottom: 1px solid #76c893;
   cursor: pointer;
+}
+a {
+  text-decoration: none;
 }
 @media only screen and (max-width: 600px) {
   .col-xs-12 {
