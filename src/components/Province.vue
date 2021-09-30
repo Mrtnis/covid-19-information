@@ -46,7 +46,7 @@ export default {
       allData: [],
       search: '',
       api_origin: api.API_ORIGIN,
-      image: 'public/assets/images/province/',
+      image: './public/assets/images/province/',
     };
   },
   methods: {
