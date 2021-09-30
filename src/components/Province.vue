@@ -23,7 +23,7 @@
     <div class="image-scroll">
       <div class="card" style="width: 18rem" v-for="(data, index) in searchProvince" :key="index">
         <div>
-          <img :src="'public/assets/images/province/' + data.provinsi + '.png'" class="card-img-top" />
+          <img :src="'./assets/images/province/' + data.provinsi + '.png'" class="card-img-top" />
           <div class="card-body">
             <div class="fw-bolder h5">{{ data.provinsi }}</div>
             <h6>Positive Cases: {{ formatNumber(data.kasusPosi) }}</h6>
