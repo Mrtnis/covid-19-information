@@ -24,9 +24,6 @@
           <div class="col">
             <h6>Vaccine</h6>
           </div>
-          <div class="col">
-            <h6 class="contact">Contact</h6>
-          </div>
         </div>
       </div>
     </div>
@@ -43,17 +40,6 @@
 }
 .d-flex {
   color: #76c893;
-}
-.contact {
-  background-color: #76c893;
-  color: white;
-  border-radius: 25px;
-  text-align: center;
-  padding-right: 20px;
-  padding-left: 20px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  margin-top: -5px;
 }
 .title {
   color: #76c893;

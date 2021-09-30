@@ -23,10 +23,12 @@
     <div class="image-scroll">
       <div class="card" style="width: 18rem" v-for="(data, index) in searchProvince" :key="index">
         <div>
-          <img :src="image + index" class="card-img-top" />
+          <img :src="image + data.provinsi + '.png'" class="card-img-top" />
           <div class="card-body">
             <div class="fw-bolder h5">{{ data.provinsi }}</div>
             <h6>Positive Cases: {{ formatNumber(data.kasusPosi) }}</h6>
+            <h6>Recover Cases: {{ formatNumber(data.kasusSemb) }}</h6>
+            <h6>Death Cases: {{ formatNumber(data.kasusMeni) }}</h6>
           </div>
         </div>
       </div>
@@ -44,7 +46,7 @@ export default {
       allData: [],
       search: '',
       api_origin: api.API_ORIGIN,
-      image: 'https://picsum.photos/200/200?random=',
+      image: 'public/assets/images/province/',
     };
   },
   methods: {
