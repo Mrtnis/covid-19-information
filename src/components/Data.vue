@@ -3,9 +3,9 @@
     <div class="card">
       <div class="card-body">
         <div class="row text-center">
-          <div class="col-md-3 col-xs-12 text-danger">
+          <div class="col-md-3 col-xs-12 text-success">
             <div class="title">{{ data.length - 1 }}</div>
-            <div class="subtitle">Affected Province</div>
+            <div class="subtitle">Data Province</div>
             <hr class="line-cases" />
           </div>
           <div class="col-md-3 col-xs-12 text-danger">
@@ -28,7 +28,7 @@
           <div class="col">
             <div class="text-center info">
               Data get from
-              <span><a href="" class="text-success source">https://indonesia-covid-19.mathdro.id</a></span>
+              <span><a href="https://indonesia-covid-19.mathdro.id" class="text-success source">https://indonesia-covid-19.mathdro.id</a></span>
             </div>
           </div>
         </div>

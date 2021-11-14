@@ -1,67 +1,63 @@
 <template>
   <section>
     <!-- website -->
-    <div class="home-page d-md-block d-none">
+    <div class="home-page pb-5">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            <div class="tagline">
-              Let's <span class="tag">protect</span> <br />
-              each other from <span class="tag">covid.</span>
+            <div class="subtitle">Get Vaccine, Boost Your Health</div>
+            <div class="title">
+              Get Vaccinated <br />
+              Now Easly With <br />
+              Vaccining.
             </div>
-            <div class="information">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam, voluptas sint. Obcaecati alias quis esse suscipit, voluptates officiis nulla soluta.</div>
+            <div class="information">Vaccining will help you to know your vaccine and find the nearest vaccination place from your house fast and easily to help you</div>
             <div class="row mt-4">
               <div class="col-md-8">
                 <div class="btn getVaccine">Get Your Vaccine</div>
               </div>
               <div class="col-md-4">
                 <div class="calendar">
-                  <i class="bi bi-calendar-check-fill"></i>
+                  <i class="bi bi-calendar3"></i>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-md-6 image-class">
-            <lord-icon src="https://cdn.lordicon.com/hsotfjpx.json" stroke="30" trigger="loop-on-hover" colors="primary:#121331,secondary:#08a88a" class="medicine"> </lord-icon>
+            <img src="../../public/assets/images/Home.png" class="first-image shadow" />
+            <img src="../../public/assets/images/Details.png" class="second-image shadow" />
           </div>
         </div>
       </div>
     </div>
     <!-- mobile -->
-    <div class="d-sm-block d-md-none mt-3">
+    <div class="mobile-page pb-5">
       <div class="container">
-        <div class="row">
-          <div class="col">
-            <div class="tagline text-center">
-              Let's <span class="tag">protect</span> <br />
-              each other from <span class="tag">covid.</span>
-            </div>
-          </div>
-        </div>
-        <div class="row mt-4">
-          <div class="col-md-6 image-class">
-            <lord-icon src="https://cdn.lordicon.com/hsotfjpx.json" stroke="30" trigger="hover" colors="primary:#121331,secondary:#08a88a" class="medicine"> </lord-icon>
+        <div class="row mt-5">
+          <div class="col-md image-mobile">
+            <img src="../../public/assets/images/Home.png" class="first-mobile shadow" />
+            <img src="../../public/assets/images/Details.png" class="second-mobile shadow" />
           </div>
         </div>
         <div class="row">
           <div class="col">
-            <div class="information">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam, voluptas sint. Obcaecati alias quis esse suscipit, voluptates officiis nulla soluta.</div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row mobile-button">
-            <div class="btn getVaccine">Get Your Vaccine</div>
-            <div class="calendar">
-              <i class="bi bi-calendar-check-fill"></i>
+            <div class="subtitle">Get Vaccine, Boost Your Health</div>
+            <div class="title">Get Vaccinated Now Easly With Vaccining.</div>
+            <div class="information">Vaccining will help you to know your vaccine and find the nearest vaccination place from your house fast and easily to help you</div>
+            <div class="row mt-4 mobile-wrap">
+              <div class="col-8">
+                <div class="btn getVaccine">Get Your Vaccine</div>
+              </div>
+              <div class="col-4">
+                <div class="calendar">
+                  <i class="bi bi-calendar3"></i>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- Data -->
-    <Data />
-    <!-- province -->
-    <Province />
   </section>
 </template>
 
@@ -78,27 +74,18 @@ export default {
 </script>
 
 <style>
-.image-class {
-  margin-top: -100px;
-}
 .medicine {
   height: 100%;
   width: 100%;
 }
-.tagline {
+.subtitle {
+  color: #17bfe9;
+  margin-bottom: 20px;
+}
+.title {
   font-size: 45px;
-  font-weight: 900;
-}
-.tag {
-  color: #76c893;
-}
-.information {
-  margin-top: 30px;
-  width: 80%;
-  text-align: justify;
-  color: rgb(70, 69, 69);
-  letter-spacing: 2px;
-  line-height: 30px;
+  font-weight: bolder;
+  color: #fff;
 }
 .getVaccine {
   color: white;
@@ -107,10 +94,12 @@ export default {
   padding: 25px;
   padding-right: 90px;
   padding-left: 90px;
-  background: linear-gradient(to right, #d9534f 50%, #76c893 50%);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.15) 50%, #17bfe9 50%);
   background-size: 200% 100%;
   background-position: right bottom;
   transition: all 0.5s ease-out;
+  font-weight: bolder;
+  font-size: 20px;
 }
 .getVaccine:hover {
   background-position: left bottom;
@@ -121,53 +110,111 @@ export default {
   height: 70px;
   width: 70px;
   border-radius: 50%;
-  background: linear-gradient(to left, #d9534f 50%, #76c893 50%);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.15) 50%, #17bfe9 50%);
   background-size: 200% 100%;
   background-position: left bottom;
-  transition: all 0.5s ease-out;
+  transition: all 0.3s ease-out;
+  font-size: 20px;
+  color: #17bfe9;
 }
 .calendar:hover {
   background-position: right bottom;
   color: white;
+  cursor: pointer;
 }
-.bi-calendar-check-fill {
-  color: white;
+.bi-calendar3 {
   line-height: 70px;
   font-size: 30px;
 }
 .home-page {
-  margin-top: 100px;
+  margin-top: 50px;
+}
+.image-class {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.first-image,
+.second-image {
+  width: 200px;
+  border-radius: 20px;
+}
+.first-image {
+  transform: rotate(-5deg);
+  z-index: 2;
+  margin-top: -40px;
+  margin-right: -15px;
+}
+.second-image {
+  transform: rotate(5deg);
+}
+
+@media only screen and (min-width: 768px) {
+  .image-class:hover .first-image,
+  .image-class:hover .second-image {
+    transition: 0.3s ease;
+    transform: rotate(0deg);
+  }
+  .image-class:hover .first-image {
+    transition: 0.3s ease;
+    margin-right: 15px;
+  }
+  .mobile-page {
+    display: none;
+  }
+  .information {
+    margin-top: 30px;
+    width: 70%;
+    color: #8289b2;
+    font-weight: 10px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
-  .tagline {
-    font-size: 35px;
-    font-weight: 900;
+  .home-page {
+    display: none;
+  }
+  .image-mobile {
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
     margin-bottom: 40px;
   }
-  .medicine {
-    height: 90%;
-    width: 90%;
+  .first-mobile,
+  .second-mobile {
+    width: 150px;
+    border-radius: 20px;
   }
-  .image-class {
+  .first-mobile {
+    transform: rotate(-5deg);
+    z-index: 2;
+    margin-top: -40px;
+    margin-right: -15px;
+  }
+  .second-mobile {
+    transform: rotate(5deg);
+  }
+  .subtitle {
     text-align: center;
+  }
+  .title {
+    text-align: center;
+    font-size: 30px;
   }
   .information {
+    margin-top: 30px;
+    color: #8289b2;
+    font-weight: 10px;
     text-align: center;
-    width: auto;
-    margin-top: -50px;
-    margin-bottom: 30px;
   }
-  .mobile-button {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    margin-bottom: 40px !important;
-    justify-content: space-evenly;
-    margin: auto;
+  .mobile-wrap {
+    display: flex;
+    align-items: center;
   }
   .getVaccine {
-    padding-right: 70px;
-    padding-left: 70px;
+    font-size: 18px;
+    padding: 30px;
   }
 }
 </style>

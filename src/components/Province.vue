@@ -25,10 +25,16 @@
         <div>
           <img :src="'./assets/images/province/' + data.provinsi + '.png'" class="card-img-top" loading="lazy" />
           <div class="card-body">
-            <div class="fw-bolder h5">{{ data.provinsi }}</div>
-            <h6>Positive Cases: {{ formatNumber(data.kasusPosi) }}</h6>
-            <h6>Recover Cases: {{ formatNumber(data.kasusSemb) }}</h6>
-            <h6>Death Cases: {{ formatNumber(data.kasusMeni) }}</h6>
+            <div class="fw-bolder h5 mb-3">{{ data.provinsi }}</div>
+            <h6>
+              Positive Cases: <b class="text-danger">{{ formatNumber(data.kasusPosi) }}</b>
+            </h6>
+            <h6>
+              Recover Cases: <b>{{ formatNumber(data.kasusSemb) }}</b>
+            </h6>
+            <h6>
+              Death Cases: <b class="text-danger">{{ formatNumber(data.kasusMeni) }}</b>
+            </h6>
           </div>
         </div>
       </div>
