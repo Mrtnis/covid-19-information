@@ -1,40 +1,78 @@
 <template>
-  <div class="container mt-5 mb-5">
-    <div class="row">
-      <div class="col">
-        <div class="mb-3 title">Data By <span>Province</span></div>
+  <div class="container my-5">
+    <!-- title -->
+    <div class="subtitle mb-2">Location</div>
+    <div class="flex-title mb-3">
+      <div class="title">Get Vaccine Location</div>
+      <div class="flex-arrow">
+        <i class="bi bi-caret-left-fill"></i>
+        <i class="bi bi-caret-right-fill"></i>
       </div>
     </div>
-    <div class="row justify-content-center mb-3">
-      <div class="col-md-6">
-        <div class="input-group mb-3">
-          <span class="input-group-text"><i class="bi bi-search text-light"></i></span>
-          <input v-model="search" type="text" class="form-control" placeholder="Search Province..." />
-        </div>
-      </div>
-    </div>
-    <div v-if="countData">
-      <div class="row">
-        <div class="col text-center">
-          <div class="text-danger">Uupss, province is not found. Please check your input :(</div>
-        </div>
-      </div>
-    </div>
-    <div class="image-scroll">
-      <div class="card" style="width: 18rem" v-for="(data, index) in searchProvince" :key="index">
-        <div>
-          <img :src="'./assets/images/province/' + data.provinsi + '.png'" class="card-img-top" loading="lazy" />
+    <!-- location -->
+    <div class="flex-location">
+      <div class="col-md-3">
+        <div class="card border">
+          <div class="card-header" style="background-image: url('https://picsum.photos/id/234/300')"></div>
           <div class="card-body">
-            <div class="fw-bolder h5 mb-3">{{ data.provinsi }}</div>
-            <h6>
-              Positive Cases: <b class="text-danger">{{ formatNumber(data.kasusPosi) }}</b>
-            </h6>
-            <h6>
-              Recover Cases: <b>{{ formatNumber(data.kasusSemb) }}</b>
-            </h6>
-            <h6>
-              Death Cases: <b class="text-danger">{{ formatNumber(data.kasusMeni) }}</b>
-            </h6>
+            <div class="title-loc">White Square</div>
+            <div class="subtitle-loc">Lorem ipsum dolor sit amet consectetur.</div>
+            <div class="flex-button">
+              <div class="btn btn-sm button-loc">Select location</div>
+              <i class="bi bi-calendar-fill"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card border">
+          <div class="card-header" style="background-image: url('https://picsum.photos/id/24/300')"></div>
+          <div class="card-body">
+            <div class="title-loc">White Square</div>
+            <div class="subtitle-loc">Lorem ipsum dolor sit amet consectetur.</div>
+            <div class="flex-button">
+              <div class="btn btn-sm button-loc">Select location</div>
+              <i class="bi bi-calendar-fill"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card border">
+          <div class="card-header" style="background-image: url('https://picsum.photos/id/22/300')"></div>
+          <div class="card-body">
+            <div class="title-loc">White Square</div>
+            <div class="subtitle-loc">Lorem ipsum dolor sit amet consectetur.</div>
+            <div class="flex-button">
+              <div class="btn btn-sm button-loc">Select location</div>
+              <i class="bi bi-calendar-fill"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card border">
+          <div class="card-header" style="background-image: url('https://picsum.photos/id/114/300')"></div>
+          <div class="card-body">
+            <div class="title-loc">White Square</div>
+            <div class="subtitle-loc">Lorem ipsum dolor sit amet consectetur.</div>
+            <div class="flex-button">
+              <div class="btn btn-sm button-loc">Select location</div>
+              <i class="bi bi-calendar-fill"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card border">
+          <div class="card-header" style="background-image: url('https://picsum.photos/id/187/300')"></div>
+          <div class="card-body">
+            <div class="title-loc">White Square</div>
+            <div class="subtitle-loc">Lorem ipsum dolor sit amet consectetur.</div>
+            <div class="flex-button">
+              <div class="btn btn-sm button-loc">Select location</div>
+              <i class="bi bi-calendar-fill"></i>
+            </div>
           </div>
         </div>
       </div>
@@ -42,77 +80,79 @@
   </div>
 </template>
 
-<script>
-import axios from 'axios';
-import api from '../api';
-
-export default {
-  data() {
-    return {
-      allData: [],
-      search: '',
-      api_origin: api.API_ORIGIN,
-    };
-  },
-  methods: {
-    formatNumber(par) {
-      return new Intl.NumberFormat().format(par);
-    },
-  },
-  computed: {
-    filteredProvinces() {
-      return this.allData.filter((item) => {
-        return item.provinsi !== 'Indonesia';
-      });
-    },
-    searchProvince() {
-      return this.filteredProvinces.filter((item) => {
-        return item.provinsi.toLowerCase().includes(this.search.toLowerCase());
-      });
-    },
-    countData() {
-      return this.searchProvince.length === 0 ? true : false;
-    },
-  },
-  mounted() {
-    axios.get(`${this.api_origin}/api/provinsi/`).then(({ data }) => {
-      this.allData = data.data;
-    });
-  },
-};
-</script>
-
 <style scoped>
+.subtitle {
+  font-weight: bold;
+  text-align: start;
+  color: var(--secondary-color);
+}
+.flex-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .title {
   font-size: 35px;
-  font-weight: 900;
-  text-align: center;
+  font-weight: bolder;
+  color: var(--primary-color);
 }
-.title span {
-  color: #76c893;
+.bi-caret-left-fill {
+  padding: 7px;
+  color: #b9c3d9;
+  border-radius: 50%;
+  margin-right: 20px;
+  background-color: #f2f2f4;
 }
-.image-scroll {
+.bi-caret-right-fill {
+  padding: 7px;
+  color: #fff;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+}
+.flex-location {
   display: flex;
-  flex-wrap: no-wrap;
   overflow-x: auto;
+  margin-bottom: 20px;
+}
+.flex-location::-webkit-scrollbar {
+  display: none;
 }
 .card {
-  flex: 0 0 auto;
-  margin-right: 15px;
-  border-radius: 20px;
-  background-color: #76c893;
   border: none;
-  color: white;
+  margin-right: 20px;
+  border-radius: 10px;
 }
-.card-img-top {
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+.card-header {
+  height: 180px;
+  border-start-end-radius: 10px;
+  border-start-start-radius: 10px;
 }
-.input-group-text {
-  background-color: #76c893;
+.title-loc {
+  font-size: 20px;
+  font-weight: bolder;
+  color: var(--primary-color);
 }
-::-webkit-scrollbar {
-  height: 0;
-  width: 0;
+.subtitle-loc {
+  font-size: 12px;
+  font-weight: bold;
+  text-align: start;
+  color: #b9c3d9;
+}
+.flex-button {
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+}
+.button-loc {
+  color: #fff;
+  margin-right: 30px;
+  padding-left: 20px;
+  border-radius: 10px;
+  padding-right: 20px;
+  background-color: var(--secondary-color);
+}
+.bi-calendar-fill {
+  font-size: 20px;
+  color: var(--secondary-color);
 }
 </style>

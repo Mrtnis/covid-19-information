@@ -21,7 +21,7 @@
           <p>Contact</p>
         </div>
       </div>
-      <div class="d-flex d-md-block d-none">
+      <div>
         <div class="row">
           <div class="col">
             <h6 class="get-vaccine">Call Center</h6>
